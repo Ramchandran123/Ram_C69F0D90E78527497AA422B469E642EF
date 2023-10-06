@@ -1,23 +1,12 @@
-# Define the Player class
-class Player:
+def fact_rec(n):
+  if n == 0 or n == 1:
+    return 1
+  else:
+    return n * fact_rec(n - 1)
 
-  def play(self):
-    print("The player is playing cricket.")
 
-    # Define the Batsman class, derived from Player
-    class Batsman(Player):
+number = 2
 
-      def play(self):
-        print("The batsman is batting.")
+res = fact_rec(number)
 
-        # Define the Bowler class, derived from Player
-        class Bowler(Player):
-
-          def play(self):
-            print("The bowler is bowling.")
-            # Create objects of Batsman and Bowler classes
-            batsman = Batsman()
-            bowler = Bowler()
-            # Call the play() method for each object
-            batsman.play()
-            bowler.play()
+print("The  factorial of {} is {}.".format(number, res))
